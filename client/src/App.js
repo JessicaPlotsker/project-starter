@@ -10,9 +10,11 @@ import PostsListPage from './pages/PostsListPage';
 import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
-import {form} from 'react-bootstrap';
-
+import {Form , Button, Container, Row, Col}  from 'react-bootstrap';
+import logo from './assets/AniLibLogo.png';
 import './App.css';
+
+
 
 //we will start from here for now 
 
@@ -41,17 +43,28 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <image src="/assets/AniLibLogo.png"/>
-        <h1> AniLib </h1>
+      <img className="AniLib" src={logo}></img>
+
+        {/* <image src={logo} /> */}
+        <h1 className="Ani-text"> AniLib </h1>
      
 
 
-  <form.control type="text" placeholder="Eneter a Title"/>
+  {/* <Form.control type="text" placeholder="Eneter a Title"/> */}
+  
 
-      <button>
-        O
-      </button>
+<Form>
+  <Form.Control type= "text" placeholder="Enter a title" />
+  </Form>
+ 
+  <Button variant= "outline-primary">Submit</Button>{''}
+  
+
+      {/* <button>
+        Submit
+      </button> */}
       </div>
+
 //         <Router>
 //           <Navigation />
 //           <div className="container-fluid text-center">
