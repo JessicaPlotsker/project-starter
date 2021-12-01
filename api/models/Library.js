@@ -3,9 +3,9 @@ const { Model } = require('sequelize');
 
 
 module.exports = (sequelize, DataTypes) => {
-  class Title extends Model {}
+  class Library extends Model {}
 
-  Title.init({
+Library.init({
    Name: {
       type: DataTypes.STRING,
       validate: {
@@ -13,25 +13,20 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true,
       }
     },
-    Author: {
+    Address: {
         type: DataTypes.STRING,
       validate: {
         len: [2, 250],
         notEmpty: true,
       }
-    }, 
-    Volume : {
-        type: DataTypes.INTEGER
-    }, 
-    unique: true
+    }
   }, {
     sequelize,
-    modelName: 'Title'
+    modelName: 'Library'
   });
 
-  Title.associate = (models) => {
-    // associations can be defined here
-    models.Title.belongsToMany(models.Library, {through: 'TitleInLibrary'});
+  Post.associate = (models) => {
+    models.Library.belongsToMany(models.Title, {through: 'TitleInLibrary'});
   };
 
   return Post;
