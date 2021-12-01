@@ -25,9 +25,9 @@ Library.init({
     modelName: 'Library'
   });
 
-  Post.associate = (models) => {
+  Library.associate = (models) => {
     models.Library.belongsToMany(models.Title, {through: 'TitleInLibrary'});
   };
 
-  return Post;
+  return Library;
 };

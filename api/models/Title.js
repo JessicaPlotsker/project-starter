@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     Volume : {
         type: DataTypes.INTEGER
     }, 
-    unique: true
+    // unique: true
   }, {
     sequelize,
     modelName: 'Title'
@@ -34,5 +34,5 @@ module.exports = (sequelize, DataTypes) => {
     models.Title.belongsToMany(models.Library, {through: 'TitleInLibrary'});
   };
 
-  return Post;
+  return Title;
 };
