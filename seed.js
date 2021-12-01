@@ -73,4 +73,39 @@ const TITLE_IN_LIBRARY = [
     {titleId: 13, libraryId: 2},
     {titleId: 14, libraryId: 3},
     {titleId: 15, libraryId: 3},
-]
+];
+
+const seed = () => {
+    return db.sequelize.sync({force: true})
+      .then(() => {
+        // Create all the entries
+        let titlePromises = TITLES.map(g => Title.create(t));
+        let libraryPromises = LIBRARIES.map(m => Library.create(l));
+        return Promise.all([...titlePromises, ...libraryPromises]);
+      })
+      .then(() => {
+        // Create the associations
+        let associationPromises = TITLE_IN_LIBRARY.map(til => {
+          let titlePromise = Title.findByPk(til.titleId);
+          let libraryPromise = Library.findByPk(til.libraryId);
+          return Promise.all([titlePromise, libraryPromise])
+            .then(([title, library]) => {
+              return title.addLibrary(library);
+            })
+        });
+        return Promise.all(associationPromises);
+      }).then(() => {
+        /*
+          Postgres only fix:
+            Since we provided fixed id's for our seed data,
+            we have to reset our id sequences in postgres.
+            (ONLY do this for Models with autoincrementing id's)
+        */
+        let titleReset = db.sequelize.query(`select setval('titles_id_seq', (select max(id) from titles), true);`)
+        let libraryReset = db.sequelize.query(`select setval('libraries_id_seq', (select max(id) from libraries), true);`)
+  
+        return Promise.all([titleReset, libraryReset])
+      });
+  }
+  
+  module.exports = seed;
