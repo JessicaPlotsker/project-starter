@@ -1,0 +1,37 @@
+'use strict';
+const { Model } = require('sequelize');
+
+
+module.exports = (sequelize, DataTypes) => {
+  class Title extends Model {}
+
+  Title.init({
+   Name: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [2, 250],
+        notEmpty: true,
+      }
+    },
+    Author: {
+        type: DataTypes.STRING,
+      validate: {
+        len: [2, 250],
+        notEmpty: true,
+      }
+    }, 
+    Volume : {
+        type: DataTypes.INTEGER
+    }, 
+    unique: true
+  }, {
+    sequelize,
+    modelName: 'post'
+  });
+
+  Post.associate = (models) => {
+    // associations can be defined here
+  };
+
+  return Post;
+};
