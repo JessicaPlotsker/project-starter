@@ -2,21 +2,21 @@ const db = require('./models');
 const { Title, Library} = db;
 
 const TITLES = [
-    {id: 1, Name: 'vinland saga', Author: 'Yukimura Makoto' , Volume: 12}, 
-    {id: 2, Name:'berserk', Author: 'Miura Kentarou', Volume: 5},
-    {id: 3, Name:'jojo bizarre adventure', Author: 'Araki Hirohiko', Volume: 4},
-    {id: 4, Name:'one piece', Author: 'Oda Eiichiro', Volume: 85},
-    {id: 5, Name:'naruto', Author: 'Masashi Kishimoto', Volume: 1},
-    {id: 6, Name:'monster', Author: 'Urasawa, Naoki', Volume: 6},
-    {id: 7, Name:'fullmetal alchemist', Author: 'Hiromu Arakawa', Volume: 4},
-    {id: 8, Name:'gintama', Author: 'Hideaki Sorachi', Volume: 30},
-    {id: 9, Name:'attack on titan', Author: 'Hajime Isayama', Volume: 19},
-    {id: 10, Name:'fruits basket', Author: 'Natsuki Takaya', Volume: 23},
-    {id: 11, Name:'tokyo ghoul', Author: 'Sui Ishida', Volume: 3},
-    {id: 12, Name: 'hunter x hunter', Author: 'Togashi, Yoshihiro', Volume: 95},
-    {id: 13, Name: 'haikyuu', Author: 'Furudate, Haruichi', Volume: 45},
-    {id: 14, Name: 'solo leveling', Author: 'Chugong', Volume: 37},
-    {id: 14, Name: 'one punch man', Author: 'Murata, Yusuke', Volume: 77},
+    {id: 1, Name: 'vinland saga', Author: 'yukimura makoto' , Volume: 12}, 
+    {id: 2, Name:'berserk', Author: 'miura kentarou', Volume: 5},
+    {id: 3, Name:'jojo bizarre adventure', Author: 'araki hirohiko', Volume: 4},
+    {id: 4, Name:'one piece', Author: 'oda eiichiro', Volume: 85},
+    {id: 5, Name:'naruto', Author: 'masashi kishimoto', Volume: 1},
+    {id: 6, Name:'monster', Author: 'urasawa, naoki', Volume: 6},
+    {id: 7, Name:'fullmetal alchemist', Author: 'hiromu arakawa', Volume: 4},
+    {id: 8, Name:'gintama', Author: 'hideaki sorachi', Volume: 30},
+    {id: 9, Name:'attack on titan', Author: 'hajime isayama', Volume: 19},
+    {id: 10, Name:'fruits basket', Author: 'natsuki takaya', Volume: 23},
+    {id: 11, Name:'tokyo ghoul', Author: 'sui ishida', Volume: 3},
+    {id: 12, Name: 'hunter x hunter', Author: 'togashi, yoshihiro', Volume: 95},
+    {id: 13, Name: 'haikyuu', Author: 'furudate, haruichi', Volume: 45},
+    {id: 14, Name: 'solo leveling', Author: 'chugong', Volume: 37},
+    {id: 14, Name: 'one punch man', Author: 'murata, yusuke', Volume: 77},
 ];
 
 const LIBRARIES = [
