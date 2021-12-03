@@ -32,7 +32,7 @@ router.get("/title:input", (req, res) => {
     //if title exists, send back data
     // res.send("This is the zipcode route handler")
     res.json({
-      getData(input);
+      message: JSON.stringify(getData(input))
     })
   }
 })
