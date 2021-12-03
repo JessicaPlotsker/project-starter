@@ -20,11 +20,11 @@ const TITLES = [
 ];
 
 const LIBRARIES = [
-    {id: 1, Name: 'Queens College Library', Address: '65-30 Kissena Blvd, Flushing, NY 11367'},
-    {id: 2, Name: 'West Hempstead Public Library', Address: '500 Hempstead Ave, West Hempstead, NY 11552'},
-    {id: 3, Name: 'New York City Public Library', Address: '476 5th Ave, New York, NY 10018'},
-    {id: 4, Name: 'Queens Public Linbrary', Address: '41-17 Main St, Flushing, NY 11355'},
-    {id: 5, Name: 'Brooklyn Public Library', Address: '203 Arlington Ave. at, Warwick St, Brooklyn, NY 11207'}
+    {id: 1, Name: 'queens college library', Address: '65-30 kissena blvd, flushing, ny 11367'},
+    {id: 2, Name: 'west hempstead public library', Address: '500 hempstead ave, west hempstead, ny 11552'},
+    {id: 3, Name: 'new york city public library', Address: '476 5th ave, new york, ny 10018'},
+    {id: 4, Name: 'queens public library', Address: '41-17 main st, flushing, ny 11355'},
+    {id: 5, Name: 'brooklyn public library', Address: '203 arlington ave. at, warwick St, brooklyn, ny 11207'}
 ];
 
 const TITLE_IN_LIBRARY = [

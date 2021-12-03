@@ -6,6 +6,14 @@ import './App.css';
 
 
 class App extends React.Component {
+  state={
+    input: ''
+  }
+
+  handleChange = (event) =>{
+    console.log(event.target.value)
+    this.setState({input : event.target.value})
+  }
   render() {
     return (
       <div>
@@ -16,8 +24,10 @@ class App extends React.Component {
   
 
 <Form>
-  <Form.Control type= "text" placeholder="Enter a title" />
+  <Form.Control type= "text" placeholder="Enter a title" onChange={this.handleChange} />
   </Form>
+  <div> Manga Title: {this.state.input}</div>
+  {this.state.input.length === 0 ? <h1>No Results</h1> : null}
  
   <Button variant= "outline-primary">Submit</Button>{''}
   
