@@ -24,7 +24,7 @@ const LIBRARIES = [
     {id: 2, Name: 'west hempstead public library', Address: '500 hempstead ave, west hempstead, ny 11552'},
     {id: 3, Name: 'new york city public library', Address: '476 5th ave, new york, ny 10018'},
     {id: 4, Name: 'queens public library', Address: '41-17 main st, flushing, ny 11355'},
-    {id: 5, Name: 'brooklyn public library', Address: '203 arlington ave. at, warwick St, brooklyn, ny 11207'}
+    {id: 5, Name: 'brooklyn public library', Address: '203 arlington ave. at, warwick st, brooklyn, ny 11207'}
 ];
 
 const TITLE_IN_LIBRARY = [
