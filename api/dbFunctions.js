@@ -2,7 +2,7 @@ const { Title } = require('./models');
 const { Library } = require('./models');
 
 
-function getTitle(input) {
+export function getTitle(input) {
     if (Title.findAll({where: {Name : input}})) return true;
     else return false;
 }
