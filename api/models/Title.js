@@ -23,7 +23,6 @@ module.exports = (sequelize, DataTypes) => {
     Volume : {
         type: DataTypes.INTEGER
     }, 
-    // unique: true
   }, {
     sequelize,
     modelName: 'Title'

@@ -1,7 +1,7 @@
 const db = require('./models');
 const { Title, Library} = db;
 
-const TITLES = [
+const TITLE = [
     {id: 1, Name: 'vinland saga', Author: 'yukimura makoto' , Volume: 12}, 
     {id: 2, Name:'berserk', Author: 'miura kentarou', Volume: 5},
     {id: 3, Name:'jojo bizarre adventure', Author: 'araki hirohiko', Volume: 4},
@@ -16,10 +16,10 @@ const TITLES = [
     {id: 12, Name: 'hunter x hunter', Author: 'togashi, yoshihiro', Volume: 95},
     {id: 13, Name: 'haikyuu', Author: 'furudate, haruichi', Volume: 45},
     {id: 14, Name: 'solo leveling', Author: 'chugong', Volume: 37},
-    {id: 14, Name: 'one punch man', Author: 'murata, yusuke', Volume: 77},
+    {id: 15, Name: 'one punch man', Author: 'murata, yusuke', Volume: 77},
 ];
 
-const LIBRARIES = [
+const LIBRARY = [
     {id: 1, Name: 'queens college library', Address: '65-30 kissena blvd, flushing, ny 11367'},
     {id: 2, Name: 'west hempstead public library', Address: '500 hempstead ave, west hempstead, ny 11552'},
     {id: 3, Name: 'new york city public library', Address: '476 5th ave, new york, ny 10018'},
@@ -63,13 +63,13 @@ const TITLE_IN_LIBRARY = [
     {titleId: 3, libraryId: 5},
     {titleId: 4, libraryId: 4},
     {titleId: 5, libraryId: 4},
-    {titleId: 6, libraryId: 5},
+    {titleId: 6, libraryId: 1},
     {titleId: 7, libraryId: 1},
     {titleId: 8, libraryId: 1},
     {titleId: 9, libraryId: 2},
     {titleId: 10, libraryId: 2},
-    {titleId: 11, libraryId: 4},
-    {titleId: 12, libraryId: 5},
+    {titleId: 11, libraryId: 2},
+    {titleId: 12, libraryId: 1},
     {titleId: 13, libraryId: 2},
     {titleId: 14, libraryId: 3},
     {titleId: 15, libraryId: 3},
@@ -79,8 +79,8 @@ const seed = () => {
     return db.sequelize.sync({force: true})
       .then(() => {
         // Create all the entries
-        let titlePromises = TITLES.map(g => Title.create(t));
-        let libraryPromises = LIBRARIES.map(m => Library.create(l));
+        let titlePromises = TITLE.map(t => Title.create(t));
+        let libraryPromises = LIBRARY.map(l => Library.create(l));
         return Promise.all([...titlePromises, ...libraryPromises]);
       })
       .then(() => {
@@ -101,8 +101,8 @@ const seed = () => {
             we have to reset our id sequences in postgres.
             (ONLY do this for Models with autoincrementing id's)
         */
-        let titleReset = db.sequelize.query(`select setval('titles_id_seq', (select max(id) from titles), true);`)
-        let libraryReset = db.sequelize.query(`select setval('libraries_id_seq', (select max(id) from libraries), true);`)
+        let titleReset = db.sequelize.query(`select setval('title_id_seq', (select max(id) from title), true);`)
+        let libraryReset = db.sequelize.query(`select setval('library_id_seq', (select max(id) from library), true);`)
   
         return Promise.all([titleReset, libraryReset])
       });

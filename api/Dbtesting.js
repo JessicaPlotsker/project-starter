@@ -42,7 +42,7 @@ function getAllTitle() {
 //     }
 // }
 
-console.log(getAllTitle);
+// console.log(getAllTitle);
 
 module.exports = {
     getAllTitle
