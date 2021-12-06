@@ -18,6 +18,13 @@ function getAllTitle() {
     });
 }
 
+// function getData(input) {
+//     getTitle 
+//     findOne
+//     getLibrary
+//     return title and library object   
+// }
+
 // export function getAllTitle() {
 //     if (Title.findAll({where: {Name : input}})) return true;
 //     else return false;
