@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 const { Post } = db;
-import {getTitle, getData} from 'api/dbFunctions.js';
+//import {getTitle, getData} from 'api/dbFunctions.js';
 // This is a simple example for providing basic CRUD routes for
 // a resource/model. It provides the following:
 //    GET    /posts
@@ -25,16 +25,16 @@ router.get("/title:input", (req, res) => {
 
 
   //if title doesnt exists send back 404 and message
-  if(!getTitle(input)) {
-    res.status(404).send("title not found")
-  }
-  else {
-    //if title exists, send back data
-    // res.send("This is the zipcode route handler")
-    res.json({
-      message: JSON.stringify(getData(input))
-    })
-  }
+  // if(!getTitle(input)) {
+  //   res.status(404).send("title not found")
+  // }
+  // else {
+  //   //if title exists, send back data
+  //   // res.send("This is the zipcode route handler")
+  //   res.json({
+  //     message: JSON.stringify(getData(input))
+  //   })
+  // }
 })
 
 module.exports = router;
