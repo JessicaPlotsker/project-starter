@@ -25,7 +25,7 @@ router.get("/:title", (req, res) => {
   const title = req.params.title;
 
   if (title === null) {
-    req.status(404).send("404 Not Found");
+    req.statusCode(404).send("404 Not Found");
   }
   else {
     res.json({

@@ -22,6 +22,15 @@
 }
 */
 
+.AniLib {
+  display: block;
+  margin: auto;
+}
+
+.Ani-text {
+  text-align: center;
+}
+
 .results{
   width: 400px;
   box-shadow: 1px 1px 3px #000;
@@ -40,4 +49,5 @@
 .submit{
   margin: auto;
   display: block;
+  margin-top: 10px;
 }
