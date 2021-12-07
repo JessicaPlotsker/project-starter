@@ -1,4 +1,5 @@
 const express = require('express');
+const { getAllTitle } = require('../Dbtesting');
 const router = express.Router();
 const db = require('../models');
 const { Post } = db;
@@ -20,8 +21,17 @@ router.get('/', (req,res) => {
   res.send("Welcome to AniLib, please type in an anime or manga title to begin")
 });
 
-router.get("/title:input", (req, res) => {
-  const input = req.params.input;
+router.get("/:title", (req, res) => {
+  const title = req.params.title;
+
+  if (title === null) {
+    req.status(404).send("404 Not Found");
+  }
+  else {
+    res.json({
+      title: title
+    });
+  }
 
 
   //if title doesnt exists send back 404 and message
