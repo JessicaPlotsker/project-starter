@@ -16,31 +16,31 @@ class App extends React.Component {
       {
         id: 1,
         Title: "Naruto",
-        Volume: {randVol},
+        Volume: Math.floor(Math.random() * (20 - 1) + 1),
         Name: "queens college library",
         Address: "65-30 kissena blvd, flushing, ny 11367",
       },
       {
         id: 2,
-        Volume: {randVol},
+        Volume: Math.floor(Math.random() * (20 - 1) + 1),
         Name: "west hempstead public library",
         Address: "500 hempstead ave, west hempstead, ny 11552",
       },
       {
         id: 3,
-        Volume: {randVol},
+        Volume: Math.floor(Math.random() * (20 - 1) + 1),
         Name: "new york city public library",
         Address: "476 5th ave, new york, ny 10018",
       },
       {
         id: 4,
-        Volume: {randVol},
+        Volume: Math.floor(Math.random() * (20 - 1) + 1),
         Name: "queens public library",
         Address: "41-17 main st, flushing, ny 11355",
       },
       {
         id: 5,
-        Volume: {randVol},
+        Volume: Math.floor(Math.random() * (20 - 1) + 1),
         Name: "brooklyn public library",
         Address: "203 arlington ave. at, warwick st, brooklyn, ny 11207",
       },
@@ -73,7 +73,7 @@ class App extends React.Component {
           Search
         </Button>
         </Form>
-        <div style={{textAlign:"center"}}>   Manga Title: {this.state.input} </div>
+        {/* <div style={{textAlign:"center"}}>   Manga Title: {this.state.input} </div> */}
         {library &&  this.state.library.map((libraries) => (
           <div className='results' key={libraries.Name}>
             <div>Title: {this.state.input}</div>
