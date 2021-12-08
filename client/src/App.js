@@ -3,10 +3,10 @@ import { Form, Button } from "react-bootstrap";
 import logo from "./assets/AniLibLogo.png";
 import "./App.css";
 
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
-}
-var randVol = getRandomArbitrary(1, 20);
+// function getRandomArbitrary(min, max) {
+//   return Math.random() * (max - min) + min;
+// }
+// var randVol = getRandomArbitrary(1, 20);
 
 class App extends React.Component {
   state = {
@@ -55,6 +55,13 @@ class App extends React.Component {
     this.setState({showLibrary: true})
     console.log("handle submit")
     };
+  resetClicked (input) {
+
+      window.location.reload();
+      console.log("reset");
+      window.location.reload(false);
+      };
+
   render() {
     let library = this.state.showLibrary;
     return (
@@ -72,6 +79,7 @@ class App extends React.Component {
           <Button className="submit" type="submit" variant="outline-primary">
           Search
         </Button>
+        <input type="reset" className="reset-button" value="Reset" onClick={() => window.location.reload(false)}></input>
         </Form>
         {/* <div style={{textAlign:"center"}}>   Manga Title: {this.state.input} </div> */}
         {library &&  this.state.library.map((libraries) => (
