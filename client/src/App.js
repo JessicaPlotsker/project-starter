@@ -2,6 +2,12 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import logo from "./assets/AniLibLogo.png";
 import "./App.css";
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+var randVol = getRandomArbitrary(1, 20);
+
 class App extends React.Component {
   state = {
     input: "",
@@ -10,7 +16,7 @@ class App extends React.Component {
       {
         id: 1,
         Title: "Naruto",
-        Volume: "4",
+        Volume: {randVol},
         Name: "queens college library",
         Address: "65-30 kissena blvd, flushing, ny 11367",
       },
