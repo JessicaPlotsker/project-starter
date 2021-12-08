@@ -34,18 +34,17 @@
 .results{
   width: 400px;
   box-shadow: 1px 1px 3px #000;
-  margin-left: 550px;
-  margin-right: 10px;
-  padding-bottom: 20px;
+  padding: 10px;
   border-radius: 10px;
-  margin-bottom: 40px;
-  text-align: center
+  margin: 20px auto;
 }
+
 .input-box{
   margin: auto;
   display: block;
   width:400px
 }
+
 .submit{
   margin: auto;
   display: block;

@@ -17,21 +17,21 @@ const { Post } = db;
 // TODO: Can you spot where we have some duplication below?
 
 
-router.get('/', (req,res) => {
+router.get('/', (req, res) => {
   res.send("Welcome to AniLib, please type in an anime or manga title to begin")
 });
 
-router.get("/:title", (req, res) => {
-  const title = req.params.title;
+// router.get("/:title", (req, res) => {
+//   const title = req.params.title;
 
-  if (title === null) {
-    req.statusCode(404).send("404 Not Found");
-  }
-  else {
-    res.json({
-      title: title
-    });
-  }
+//   if (title === null) {
+//     req.statusCode(404).send("404 Not Found");
+//   }
+//   else {
+//     res.json({
+//       title: title
+//     });
+//   }
 
 
   //if title doesnt exists send back 404 and message
@@ -45,6 +45,6 @@ router.get("/:title", (req, res) => {
   //     message: JSON.stringify(getData(input))
   //   })
   // }
-})
+// })
 
 module.exports = router;

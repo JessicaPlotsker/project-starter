@@ -9,6 +9,8 @@ class App extends React.Component {
     library: [
       {
         id: 1,
+        Title: "Naruto",
+        Volume: "4",
         Name: "queens college library",
         Address: "65-30 kissena blvd, flushing, ny 11367",
       },
@@ -58,14 +60,16 @@ class App extends React.Component {
             onChange={this.handleChange}
           />
           <Button className="submit" type="submit" variant="outline-primary">
-          Submit
+          Search
         </Button>
         </Form>
         <div style={{textAlign:"center"}}>   Manga Title: {this.state.input} </div>
         {library &&  this.state.library.map((libraries) => (
           <div className='results' key={libraries.Name}>
-            <div>{libraries.Name}: </div>
-            <div>{libraries.Address}</div>
+            <div>Title: {libraries.Title}</div>
+            <div>Volume: {libraries.Volume}</div>
+            <div>Library: {libraries.Name}</div>
+            <div>Address: {libraries.Address}</div>
           </div>
         )) }
         {""}
