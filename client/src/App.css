@@ -21,3 +21,32 @@
   color: #09d3ac;
 }
 */
+
+.AniLib {
+  display: block;
+  margin: auto;
+}
+
+.Ani-text {
+  text-align: center;
+}
+
+.results{
+  width: 400px;
+  box-shadow: 1px 1px 3px #000;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.input-box{
+  margin: auto;
+  display: block;
+  width:400px
+}
+
+.submit{
+  margin: auto;
+  display: block;
+  margin-top: 10px;
+}
