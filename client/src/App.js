@@ -72,6 +72,7 @@ class App extends React.Component {
           <Button className="submit" type="submit" variant="outline-primary">
           Search
         </Button>
+        <input type="reset" className="reset-button" value="Reset" onClick="window.location.reload()"></input>
         </Form>
         {/* <div style={{textAlign:"center"}}>   Manga Title: {this.state.input} </div> */}
         {library &&  this.state.library.map((libraries) => (
