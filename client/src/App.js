@@ -22,21 +22,25 @@ class App extends React.Component {
       },
       {
         id: 2,
+        Volume: {randVol},
         Name: "west hempstead public library",
         Address: "500 hempstead ave, west hempstead, ny 11552",
       },
       {
         id: 3,
+        Volume: {randVol},
         Name: "new york city public library",
         Address: "476 5th ave, new york, ny 10018",
       },
       {
         id: 4,
+        Volume: {randVol},
         Name: "queens public library",
         Address: "41-17 main st, flushing, ny 11355",
       },
       {
         id: 5,
+        Volume: {randVol},
         Name: "brooklyn public library",
         Address: "203 arlington ave. at, warwick st, brooklyn, ny 11207",
       },
@@ -72,7 +76,7 @@ class App extends React.Component {
         <div style={{textAlign:"center"}}>   Manga Title: {this.state.input} </div>
         {library &&  this.state.library.map((libraries) => (
           <div className='results' key={libraries.Name}>
-            <div>Title: {libraries.Title}</div>
+            <div>Title: {this.state.input}</div>
             <div>Volume: {libraries.Volume}</div>
             <div>Library: {libraries.Name}</div>
             <div>Address: {libraries.Address}</div>
