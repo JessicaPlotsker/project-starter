@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.results{
+.results {
   width: 400px;
   box-shadow: 1px 1px 3px #000;
   padding: 10px;
@@ -15,25 +15,22 @@
   margin: 20px auto;
 }
 
-.input-box{
+.input-box {
   margin: auto;
   display: block;
   width:400px
 }
 
-.submit{
-  margin: auto;
-  display: block;
-  margin-top: 10px;
+.buttons {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+
+.submit-button {
+  margin-right: 15px;
 }
 
 .reset-button {
-  margin: auto;
-  display: block;
-  margin-top: 10px;
-  color: #007bff;
-  border-color: #007bff;
-  background-color: #fff;
-  border: 1px solid;
-  border-radius: 0.25rem;
+  margin-left: 15px;
 }

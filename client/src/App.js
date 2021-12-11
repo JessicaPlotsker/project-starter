@@ -76,10 +76,10 @@ class App extends React.Component {
             placeholder="Enter a title"
             onChange={this.handleChange}
           />
-          <Button className="submit" type="submit" variant="outline-primary">
-          Search
-        </Button>
-        <input type="reset" className="reset-button" value="Reset" onClick={() => window.location.reload(false)}></input>
+          <div className="buttons">
+            <Button className="submit-button" type="submit" variant="outline-primary">Search</Button>
+            <Button className="reset-button" type="reset" variant="outline-primary" onClick={() => window.location.reload(false)}>Reset</Button>
+          </div>
         </Form>
         {/* <div style={{textAlign:"center"}}>   Manga Title: {this.state.input} </div> */}
         {library &&  this.state.library.map((libraries) => (
